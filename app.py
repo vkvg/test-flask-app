@@ -14,4 +14,4 @@ def index():
     db.session.commit()
     result = db.session.execute("SELECT COUNT(*) FROM visitors")
     counter = result.fetchone()[0]
-    return render_template("index.html", counter=counter) 
+    return render_template("index.jinja", counter=counter) 
